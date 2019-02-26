@@ -31,4 +31,9 @@ public class TbItemCatServiceImpl implements TbItemCatService {
         }
         return list;
     }
+
+    @Override
+    public TbItemCat queryItemCatById(Long itemId) {
+        return tbItemCatMapper.selectByPrimaryKey(itemId);
+    }
 }

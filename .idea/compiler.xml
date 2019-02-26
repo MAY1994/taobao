@@ -6,12 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="taobao-cache-interface" />
+        <module name="taobao-cache-service" />
         <module name="taobao-common" />
+        <module name="taobao-content-interface" />
+        <module name="taobao-content-service" />
         <module name="taobao-manager-dao" />
         <module name="taobao-manager-interface" />
         <module name="taobao-manager-pojo" />
         <module name="taobao-manager-service" />
         <module name="taobao-manager-web" />
+        <module name="taobao-portal-web" />
+        <module name="taobao-search-interface" />
+        <module name="taobao-search-service" />
+        <module name="taobao-search-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

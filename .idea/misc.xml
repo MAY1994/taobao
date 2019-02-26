@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/taobao-cache/taobao-cache-service" />
+    <file type="web" url="file://$PROJECT_DIR$/taobao-content/taobao-content-service" />
     <file type="web" url="file://$PROJECT_DIR$/taobao-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/taobao-manager/taobao-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/taobao-manager/test" />
+    <file type="web" url="file://$PROJECT_DIR$/taobao-portal-web" />
+    <file type="web" url="file://$PROJECT_DIR$/taobao-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/taobao-search/taobao-search-service" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />

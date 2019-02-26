@@ -9,15 +9,18 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <context:component-scan base-package="com.taobao.service.impl"/>
+
     <!-- 使用dubbo发布服务 -->
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="taobao-manager"/>
-    <dubbo:registry protocol="zookeeper" address="192.168.182.128:2181"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.149.128:2181"/>
     <!-- 用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="hessian" port="20881"/>
     <!-- 声明需要暴露的服务接口 -->
-    <dubbo:service interface="com.taobao.service.TestService" ref="testServiceImpl"/>
-    <dubbo:service interface="com.taobao.service.TbItemService" ref="tbItemServiceImpl"/>
-    <dubbo:service interface="com.taobao.service.TbItemCatService" ref="tbItemCatServiceImpl"/>
+    <dubbo:service protocol="dubbo" interface="com.taobao.service.TestService" ref="testServiceImpl"/>
+    <dubbo:service protocol="dubbo" interface="com.taobao.service.TbItemService" ref="tbItemServiceImpl"/>
+    <dubbo:service protocol="dubbo" interface="com.taobao.service.TbItemCatService" ref="tbItemCatServiceImpl"/>
+    <dubbo:service protocol="hessian" interface="com.taobao.service.PictureService" ref="pictureServiceImpl"/>
 
 </beans>

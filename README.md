@@ -7,3 +7,5 @@ centos7<br>
 tomcat8<br>
 zookeeper:3.4.13<br>
 dubbo:2.5.3<br>
+activemq:5.14.5<br>
+nginx+redis+tomcat堆三级缓存架构的商品详情页系统
