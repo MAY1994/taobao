@@ -43,6 +43,11 @@ public class TbItemServiceImpl implements TbItemService {
     }
 
     @Override
+    public TbItemDesc queryItemDescById(Long id) {
+        return tbItemDescMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
     public EasyUIDataGridResult queryItemListWithPage(Integer page, Integer pageSize) {
         if (page == null) {
             page = 1;
@@ -81,14 +86,12 @@ public class TbItemServiceImpl implements TbItemService {
         * 生产者
         * */
         javax.jms.Destination defaultDestination = jmsTemplate.getDefaultDestination();
+        System.out.println("=========增加商品，生产消息===========");
         jmsTemplate.send(defaultDestination, new MessageCreator() {
             @Override
             public Message createMessage(Session session) throws JMSException {
-                /*item:表示商品被修改
-                * itemId指示哪个商品
-                * 然后是具体哪个维度被修改
-                * */
-                return session.createTextMessage("item:"+itemId+":"+"add");
+                //格式为Json：{"serviceId":"tbItem","id":"155119146082640"}
+                return session.createTextMessage("{\"serviceId\":\"tbItem\",\"id\":\""+tbItem.getId()+"\"}");
             }
         });
 

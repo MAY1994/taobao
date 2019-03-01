@@ -9,6 +9,8 @@ public interface TbItemService {
 
     TbItem queryItemById(long id);
 
+    TbItemDesc queryItemDescById(Long id);
+
     EasyUIDataGridResult queryItemListWithPage(Integer page, Integer pageSize);
 
     TaobaoResult createItem(TbItem tbItem, TbItemDesc tbItemDesc);

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="taobao-search-web:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/taobao_search_web_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="taobao-search-web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="taobao-search-web" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

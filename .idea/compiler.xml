@@ -11,6 +11,7 @@
         <module name="taobao-common" />
         <module name="taobao-content-interface" />
         <module name="taobao-content-service" />
+        <module name="taobao-item-web" />
         <module name="taobao-manager-dao" />
         <module name="taobao-manager-interface" />
         <module name="taobao-manager-pojo" />
@@ -20,6 +21,9 @@
         <module name="taobao-search-interface" />
         <module name="taobao-search-service" />
         <module name="taobao-search-web" />
+        <module name="taobao-sso-interface" />
+        <module name="taobao-sso-service" />
+        <module name="taobao-sso-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

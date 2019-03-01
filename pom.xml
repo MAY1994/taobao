@@ -17,6 +17,9 @@
         <module>taobao-search-web</module>
         <module>taobao-search</module>
         <module>taobao-cache</module>
+        <module>taobao-item-web</module>
+        <module>taobao-sso</module>
+        <module>taobao-sso-web</module>
     </modules>
     <properties>
         <junit.version>4.12</junit.version>
@@ -50,7 +53,9 @@
         <hessian.version>4.0.7</hessian.version>
         <jetty.version>6.1.26</jetty.version>
         <ehcache.version>2.10.4</ehcache.version>
-
+        <activemq-core.version>5.7.0</activemq-core.version>
+        <activemq-pool.version>5.13.0</activemq-pool.version>
+        <fastjson.version>1.2.38</fastjson.version>
 
     </properties>
     <!-- 就是管理版本的标签   其下的dependencies标签只是版本的管理 并不依赖jar-->
@@ -265,8 +270,23 @@
                 <artifactId>ehcache</artifactId>
                 <version>${ehcache.version}</version>
             </dependency>
-
-
+            <!--activemq-->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-core</artifactId>
+                <version>${activemq-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>${activemq-pool.version}</version>
+            </dependency>
+            <!--fastJson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
